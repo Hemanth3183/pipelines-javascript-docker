@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hemanthpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hemanthpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: hemanthpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: hemanthpipelinesjavascriptdocker 
+          image: hemiacr.azurecr.io/hemanthpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
