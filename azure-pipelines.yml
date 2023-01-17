@@ -44,7 +44,7 @@ stages:
           $(tag)
     - task: CopyFiles@2
       inputs:
-        SourceFolder: 'manifests'
+        SourceFolder: '/home/vsts/work/1/s/manifests'
         Contents: '*.yaml'
         TargetFolder: '$(build.artifactstagingdirectory)/manifests'
 
