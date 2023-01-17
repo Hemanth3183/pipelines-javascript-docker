@@ -17,3 +17,14 @@ spec:
           image: hemiacr.azurecr.io/hemanthpipelinesjavascriptdocker
           ports:
           - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: hemanthpipelinesjavascriptdocker
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 8080 
+    selector:
+        app: hemanthpipelinesjavascriptdocker
