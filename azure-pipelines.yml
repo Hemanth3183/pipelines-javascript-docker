@@ -44,9 +44,9 @@ stages:
           $(tag)
     - task: CopyFiles@2
       inputs:
-        SourceFolder: '$(agent.builddirectory)/manifests'
-        Contents: '**yaml'
-        TargetFolder: '$(build.artifactstagingdirectory)'
+        SourceFolder: '$(agent.builddirectory)'
+        Contents: '*.yaml'
+        TargetFolder: '$(build.artifactstagingdirectory)/manifests'
 
     - task: PublishBuildArtifacts@1
       inputs:
