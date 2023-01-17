@@ -44,6 +44,7 @@ stages:
           $(tag)
     - task: CopyFiles@2
       inputs:
+        SourceFolder: 'drop/manifests'
         Contents: '**'
         TargetFolder: '$(build.artifactstagingdirectory)'
 
