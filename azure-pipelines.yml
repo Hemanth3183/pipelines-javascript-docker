@@ -5,11 +5,6 @@
 trigger:
 - master
 
-pool:
-  name: 'hemiselfhosted'
-  demands:
-    - agent.name -equals hemiacr
-
 resources:
 - repo: self
 
@@ -35,9 +30,6 @@ stages:
   - job: Build
     displayName: Build
     pool:
-      name: 'hemiselfhosted'
-      demands:
-        - agent.name -equals hemiacr
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
