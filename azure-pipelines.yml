@@ -6,7 +6,7 @@ trigger:
 - master
 
 pool:
-  name: hemiselfhosted
+  name: 'hemiselfhosted'
 
 resources:
 - repo: self
