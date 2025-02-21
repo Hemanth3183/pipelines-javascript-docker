@@ -7,6 +7,8 @@ trigger:
 
 pool:
   name: 'hemiselfhosted'
+  demands:
+    - agent.name -equals hemiacr
 
 resources:
 - repo: self
@@ -23,8 +25,6 @@ variables:
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'
-
-  vmImageName: 'ubuntu-latest'
 
 stages:
 - stage: Build
