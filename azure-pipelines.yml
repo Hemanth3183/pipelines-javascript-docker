@@ -5,6 +5,9 @@
 trigger:
 - master
 
+pool:
+  name: hemiselfhosted
+
 resources:
 - repo: self
 
@@ -17,9 +20,6 @@ variables:
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'hemiacr415a-auth'
-
-  # Agent VM image name
-  vmImageName: 'ubuntu-latest'
 
   # Name of the new namespace being created to deploy the PR changes.
   k8sNamespaceForPR: 'review-app-$(System.PullRequest.PullRequestId)'
