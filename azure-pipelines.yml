@@ -36,6 +36,8 @@ stages:
     displayName: Build
     pool:
       name: 'hemiselfhosted'
+      demands:
+        - agent.name -equals hemiacr
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
