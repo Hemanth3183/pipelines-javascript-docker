@@ -35,6 +35,7 @@ stages:
   - job: Build
     displayName: Build
     pool:
+      name: 'hemiselfhosted'
       vmImage: $(vmImageName)
     steps:
     - task: Docker@2
