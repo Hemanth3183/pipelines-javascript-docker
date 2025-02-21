@@ -13,7 +13,7 @@ variables:
   # Container registry service connection established during pipeline creation
   dockerRegistryServiceConnection: 'e5c54cd4-7d19-4180-9093-a96de88627e8'
   imageRepository: 'hemanthpipelinesjavascriptdocker'
-  containerRegistry: 'hemiacr.azurecr.io'
+  containerRegistry: 'hemiacr.southeastasia.data.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
   imagePullSecret: 'hemiacr415a-auth'
