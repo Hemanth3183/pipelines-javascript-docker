@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: hemanthpipelinesjavascriptdocker 
-          image: hemiacr.azurecr.io/hemanthpipelinesjavascriptdocker
+          image: hemiacr.southeastasia.data.azurecr.io/hemanthpipelinesjavascriptdocker
           ports:
           - containerPort: 8080
 ---
